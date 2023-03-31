@@ -1,13 +1,5 @@
 import { factorial } from "mathjs/number";
 
-// export function factorial(n: number): number {
-//     let product = 1;
-//     for (let i = 2; i < n + 1; ++i) {
-//         product = product * i;
-//     }
-//     return product;
-// }
-
 export function nPr(n: number, r: number): number {
     return factorial(n) / factorial(n - r);
 }

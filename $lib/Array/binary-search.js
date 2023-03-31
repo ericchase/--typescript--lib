@@ -8,8 +8,7 @@ export function binarySearch(array, target, isOrdered = (a, b) => a < b) {
     while (begin < end) {
         if (isOrdered(target, array[middle])) {
             end = middle;
-        }
-        else {
+        } else {
             if (!isOrdered(array[middle], target)) {
                 break;
             }
@@ -20,7 +19,11 @@ export function binarySearch(array, target, isOrdered = (a, b) => a < b) {
     return middle;
 }
 binarySearch.lower = function (array, target, isOrdered = (a, b) => a < b) {
-    return binarySearch.upper(array, target, (a, b) => isOrdered(a, b) || !isOrdered(b, a)) + 1;
+    return binarySearch.upper(
+        array,
+        target,
+        (a, b) => isOrdered(a, b) || !isOrdered(b, a),
+    ) + 1;
 };
 binarySearch.upper = function (array, target, isOrdered = (a, b) => a < b) {
     let [begin, end] = getEndpoints(array);
@@ -28,8 +31,7 @@ binarySearch.upper = function (array, target, isOrdered = (a, b) => a < b) {
     while (begin < end) {
         if (isOrdered(target, array[middle])) {
             end = middle;
-        }
-        else {
+        } else {
             begin = middle + 1;
         }
         middle = getMidpoint(begin, end);

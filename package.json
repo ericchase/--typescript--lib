@@ -13,6 +13,7 @@
     },
     "type": "module",
     "dependencies": {
+        "js-levenshtein": "^1.1.6",
         "mathjs": "^11.7.0"
     }
 }
