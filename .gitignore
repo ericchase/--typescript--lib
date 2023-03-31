@@ -1,0 +1,20 @@
+# ignore all files/folders in same direction as .gitignore file
+/*
+
+# unignore library folders and files
+!/$lib/
+!/$lib-test/
+
+# unignore vscode settings
+!/.vscode/
+
+# unignore project settings
+!/.gitignore
+!/deno.json
+!/jest.config.ts
+!/package.json
+!/tsconfig.json
+
+# unignore experimentation file
+/_.js
+/_.ts
