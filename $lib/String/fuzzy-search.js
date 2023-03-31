@@ -80,7 +80,6 @@ export class FuzzyMatcher {
                 this.searchList(inputTextList, targetWord, tolerance)
             )
             .forEach(addToMatchResultMap);
-        // proprietary sort order
         return Array.from(indexToMatchResultMap.values())
             .sort((a, b) =>
                 (b.count / b.distance) - (a.count / a.distance) ||
@@ -109,12 +108,11 @@ export class TextProcessor {
         this.processors = processors;
     }
     run(input) {
+        if (Array.isArray(input) && typeof input[0] === "string") {
+            return TextProcessor.ProcessTextList(input, this.processors);
+        }
         if (typeof input === "string") {
-            if (Array.isArray(input)) {
-                return TextProcessor.ProcessTextList(input, this.processors);
-            } else {
-                return TextProcessor.ProcessText(input, this.processors);
-            }
+            return TextProcessor.ProcessText(input, this.processors);
         }
         return input;
     }

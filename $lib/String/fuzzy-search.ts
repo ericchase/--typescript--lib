@@ -130,7 +130,6 @@ export class FuzzyMatcher {
             )
             .forEach(addToMatchResultMap);
 
-        // proprietary sort order
         return Array.from(indexToMatchResultMap.values())
             .sort((a, b) =>
                 (b.count / b.distance) - (a.count / a.distance) ||
@@ -166,18 +165,17 @@ export class TextProcessor {
         public processors: ITextProcessor[],
     ) {}
     public run<T>(input: T): T {
+        if (Array.isArray(input) && typeof input[0] === "string") {
+            return TextProcessor.ProcessTextList(
+                input as string[],
+                this.processors,
+            ) as T;
+        }
         if (typeof input === "string") {
-            if (Array.isArray(input)) {
-                return TextProcessor.ProcessTextList(
-                    input as string[],
-                    this.processors,
-                ) as T;
-            } else {
-                return TextProcessor.ProcessText(
-                    input as string,
-                    this.processors,
-                ) as T;
-            }
+            return TextProcessor.ProcessText(
+                input as string,
+                this.processors,
+            ) as T;
         }
         return input;
     }
