@@ -15,11 +15,9 @@ export declare abstract class PriorityQueue<T> implements IPriorityQueue<T> {
     remove(): T | undefined;
     protected queue: IBinaryHeap<Keyed<T>>;
 }
-export declare class MaxPriorityQueue<T> extends PriorityQueue<T>
-    implements IPriorityQueue<T> {
+export declare class MaxPriorityQueue<T> extends PriorityQueue<T> implements IPriorityQueue<T> {
     constructor(isOrdered?: (a: T, b: T) => boolean);
 }
-export declare class MinPriorityQueue<T> extends PriorityQueue<T>
-    implements IPriorityQueue<T> {
+export declare class MinPriorityQueue<T> extends PriorityQueue<T> implements IPriorityQueue<T> {
 }
 export {};

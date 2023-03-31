@@ -19,10 +19,8 @@ export declare class BinaryHeap<T> implements IBinaryHeap<T> {
     protected swap(index1: number, index2: number): void;
     protected heap: T[];
 }
-export declare class MaxBinaryHeap<T> extends BinaryHeap<T>
-    implements IBinaryHeap<T> {
+export declare class MaxBinaryHeap<T> extends BinaryHeap<T> implements IBinaryHeap<T> {
     constructor(isOrdered?: (a: T, b: T) => boolean);
 }
-export declare class MinBinaryHeap<T> extends BinaryHeap<T>
-    implements IBinaryHeap<T> {
+export declare class MinBinaryHeap<T> extends BinaryHeap<T> implements IBinaryHeap<T> {
 }

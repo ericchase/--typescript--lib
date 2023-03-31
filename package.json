@@ -8,7 +8,8 @@
     },
     "scripts": {
         "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
-        "test.lib": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
+        "test.lib": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
+        "format": "deno fmt"
     },
     "type": "module",
     "dependencies": {

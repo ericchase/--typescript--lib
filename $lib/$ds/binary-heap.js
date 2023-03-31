@@ -1,7 +1,7 @@
 export class BinaryHeap {
+    isOrdered;
     constructor(isOrdered = (a, b) => a < b) {
         this.isOrdered = isOrdered;
-        this.heap = [];
     }
     get length() {
         return this.heap.length;
@@ -38,16 +38,12 @@ export class BinaryHeap {
         const leftChildIndex = this.getLeftChildIndex(index);
         const rightChildIndex = this.getRightChildIndex(index);
         let orderedIndex = index;
-        if (
-            leftChildIndex < this.heap.length &&
-            this.isOrdered(this.heap[leftChildIndex], this.heap[orderedIndex])
-        ) {
+        if (leftChildIndex < this.heap.length &&
+            this.isOrdered(this.heap[leftChildIndex], this.heap[orderedIndex])) {
             orderedIndex = leftChildIndex;
         }
-        if (
-            rightChildIndex < this.heap.length &&
-            this.isOrdered(this.heap[rightChildIndex], this.heap[orderedIndex])
-        ) {
+        if (rightChildIndex < this.heap.length &&
+            this.isOrdered(this.heap[rightChildIndex], this.heap[orderedIndex])) {
             orderedIndex = rightChildIndex;
         }
         if (orderedIndex !== index) {
@@ -71,6 +67,7 @@ export class BinaryHeap {
             this.heap[index1],
         ];
     }
+    heap = [];
 }
 export class MaxBinaryHeap extends BinaryHeap {
     constructor(isOrdered = (a, b) => a < b) {

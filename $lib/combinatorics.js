@@ -31,11 +31,13 @@ export function nChooseRPermutations(choices, r) {
                 // reset lower index if necessary
                 if (++i < indices.length) {
                     indices[i] = 0;
-                } else {
+                }
+                else {
                     // done
                     break;
                 }
-            } else {
+            }
+            else {
                 // move to higher index and increment it
                 ++indices[--i];
             }
@@ -70,11 +72,13 @@ export function nChooseRCombinations(choices, r) {
                 // reset lower index if necessary
                 if (++i < indices.length) {
                     indices[i] = indices[i - 1] + 1;
-                } else {
+                }
+                else {
                     // done
                     break;
                 }
-            } else {
+            }
+            else {
                 // move to higher index and increment it
                 ++indices[--i];
             }

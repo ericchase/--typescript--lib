@@ -34,16 +34,9 @@ export function* zip(...iterables) {
         return values;
     }
     const iterators = iterables
-        .map((iterable) =>
-            iterable !== null && iterable !== void 0 ? iterable : getFaker()
-        )
+        .map((iterable) => iterable ?? getFaker())
         .map((iterable) => Symbol.iterator in iterable ? iterable : getFaker())
-        .map((iterable) => {
-            var _a;
-            return (_a = iterable[Symbol.iterator]()) !== null && _a !== void 0
-                ? _a
-                : getFaker();
-        })
+        .map((iterable) => iterable[Symbol.iterator]() ?? getFaker())
         .map((iterator) => "next" in iterator ? iterator : getFaker());
     let values = process(iterators);
     while (fakedCount < iterators.length) {

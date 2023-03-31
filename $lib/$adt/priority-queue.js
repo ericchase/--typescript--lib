@@ -1,37 +1,33 @@
 import { BinaryHeap } from "../$ds/binary-heap.js";
 class Keyed {
+    key;
+    data;
     constructor(key, data) {
         this.key = key;
         this.data = data;
     }
 }
 export class PriorityQueue {
+    isOrdered;
     constructor(isOrdered = (a, b) => a < b) {
         this.isOrdered = isOrdered;
-        this.key = 0;
-        this.queue = new BinaryHeap((a, b) =>
-            this.isOrdered(a.data, b.data) ||
-            !this.isOrdered(b.data, a.data) && a.key < b.key
-        );
+        this.queue = new BinaryHeap((a, b) => this.isOrdered(a.data, b.data) ||
+            !this.isOrdered(b.data, a.data) && a.key < b.key);
     }
     get length() {
         return this.queue.length;
     }
     get top() {
-        var _a;
-        return (_a = this.queue.top) === null || _a === void 0
-            ? void 0
-            : _a.data;
+        return this.queue.top?.data;
     }
+    key = 0;
     insert(value) {
         this.queue.insert(new Keyed(this.key++, value));
     }
     remove() {
-        var _a;
-        return (_a = this.queue.remove()) === null || _a === void 0
-            ? void 0
-            : _a.data;
+        return this.queue.remove()?.data;
     }
+    queue;
 }
 export class MaxPriorityQueue extends PriorityQueue {
     constructor(isOrdered = (a, b) => a < b) {
