@@ -9,6 +9,7 @@
     "scripts": {
         "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
         "test.lib": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
+        "compile": "deno fmt && tsc && deno fmt",
         "format": "deno fmt"
     },
     "type": "module",

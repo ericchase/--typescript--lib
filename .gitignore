@@ -16,5 +16,6 @@
 !/tsconfig.json
 
 # unignore experimentation file
-/_.js
-/_.ts
+!/_.d.ts
+!/_.js
+!/_.ts
