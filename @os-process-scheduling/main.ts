@@ -1,4 +1,4 @@
-import { MinPriorityQueue } from '../$lib/$adt/priority-queue.js';
+import { MinPriorityQueue } from '../src/lib/$adt/priority-queue.js';
 
 // async function getStandardInput() {
 //     const chunks = [];

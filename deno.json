@@ -1,9 +1,0 @@
-{
-  "fmt": {
-    "options": {
-      "lineWidth": 80,
-      "indentWidth": 2,
-      "singleQuote": false
-    }
-  }
-}
