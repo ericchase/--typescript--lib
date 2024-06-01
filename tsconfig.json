@@ -20,7 +20,7 @@
     "outDir": "out",
     "rootDir": "./"
   },
-  "exclude": ["*.config.ts"],
+  "exclude": ["node_modules", "*.config.ts"],
   "include": ["./src"],
   "watchOptions": {
     "watchDirectory": "useFsEvents",

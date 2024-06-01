@@ -1,4 +1,14 @@
-import { factorial } from 'mathjs/number';
+const factorial_cache = [1, 1];
+export function factorial(n: number) {
+  if (!(n in factorial_cache)) {
+    let res = factorial_cache[factorial_cache.length - 1];
+    for (let i = factorial_cache.length; i < n; ++i) {
+      factorial_cache[i] = res *= i;
+    }
+    factorial_cache[n] = res * n;
+  }
+  return factorial_cache[n];
+}
 
 export function nPr(n: number, r: number): number {
   return factorial(n) / factorial(n - r);
