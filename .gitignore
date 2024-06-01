@@ -1,21 +1,33 @@
-# ignore all files/folders in same direction as .gitignore file
-/*
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
 
-# unignore library folders and files
-!/$lib/
-!/$lib-test/
+node_modules
+dist
+dist-ssr
+*.local
 
-# unignore vscode settings
-!/.vscode/
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
 
-# unignore project settings
-!/.gitignore
-!/deno.json
-!/jest.config.ts
-!/package.json
-!/tsconfig.json
+# Other
+*.env
+*.exe
+build
+debug
+src-tauri/target
 
-# unignore experimentation file
-!/_.d.ts
-!/_.js
-!/_.ts
+*.mp4

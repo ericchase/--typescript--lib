@@ -1,0 +1,9 @@
+NCORES   1    // system has one core
+NEW      0    // new process starts at t = 0 ms
+CORE     10   // request 10 ms of CPU time
+DISK     0    // do a non-blocking disk access
+CORE     30   // request 30 ms of CPU time
+NEW      5    // new process starts at t = 5 ms
+CORE     20   // request 20 ms of CPU time
+DISK     1    // do a blocking disk access for 10 ms
+CORE     40   // request 40 ms of CPU time

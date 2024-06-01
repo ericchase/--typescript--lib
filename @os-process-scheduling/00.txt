@@ -1,0 +1,11 @@
+NCORES   1    // system has one core
+NEW      0    // new process starts at t = 0 ms
+CORE     99   // request 99 ms of CPU time
+DISK     0    // do a non-blocking disk access
+CORE     99   // request 99 ms of CPU time
+DISPLAY  99   // write to display for 99 ms
+CORE     99   // request 99 ms of CPU time
+DISK     1    // do a blocking disk access for 10 ms
+CORE     99   // request 99 ms of CPU time
+INPUT    99   // wait for user input for 99 ms
+CORE     99   // request 99 ms of CPU time

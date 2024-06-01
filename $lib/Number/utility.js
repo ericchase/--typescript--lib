@@ -1,10 +1,13 @@
-function getMidpoint(beg, end) {
-    if ((end - beg) % 2 === 0) {
-        return (beg + end) / 2;
-    } else {
-        return (beg + end - 1) / 2;
-    }
+// function getMidpoint(beg: number, end: number): number {
+//     if ((end - beg) % 2 === 0) {
+//         return (beg + end) / 2;
+//     } else {
+//         return (beg + end - 1) / 2;
+//     }
+// }
+function getMidpoint(a, b) {
+  return 0 === (b - a) % 2 ? (a + b) / 2 : (a + b - 1) / 2;
 }
 export const Integer = {
-    getMidpoint,
+  getMidpoint,
 };

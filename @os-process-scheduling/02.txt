@@ -1,0 +1,13 @@
+NCORES   2    // system has two cores
+NEW      0    // new process starts at t = 0 ms
+CORE     200  // request 200 ms of CPU time
+DISK     0    // do a non-blocking disk access
+CORE     30   // request 30 ms of CPU time
+DISPLAY  100  // write to display for 100 ms
+CORE     10   // request 10 ms of CPU time
+INPUT    900  // wait for user input for 900 ms
+CORE     10   // request 10 ms of CPU time
+DISK     1    // do a blocking disk access for 10 ms
+CORE     30   // request 30 ms of CPU time
+NEW      100  // new process starts at t = 100 ms
+CORE     40   // request 40 ms of CPU time

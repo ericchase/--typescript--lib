@@ -1,0 +1,43 @@
+-- ARRIVAL event for process 0 at time 0 ms
+-- Process 0 starts at time 0 ms
+-- Process 0 requests a core at time 0 ms for 99 ms
+-- Process 0 gets a core at time 0 ms
+-- Process 0 will release a core at time 99 ms
+-- CORE completion event for process 0 at time 99 ms
+-- Process 0 requests disk access at time 99 ms for 10 ms
+-- Process 0 will release the disk at time 109 ms
+-- Process 0 requests a core at time 99 ms for 99 ms
+-- Process 0 gets a core at time 99 ms
+-- Process 0 will release a core at time 198 ms
+-- DISK completion event for process 0 at time 109 ms
+-- CORE completion event for process 0 at time 198 ms
+-- Process 0 requests user interaction at time 198 ms for 99 ms
+-- Process 0 will complete user interaction at time 297 ms
+-- USER completion event for process 0 at time 297 ms
+-- Process 0 requests a core at time 297 ms for 99 ms
+-- Process 0 gets a core at time 297 ms
+-- Process 0 will release a core at time 396 ms
+-- CORE completion event for process 0 at time 396 ms
+-- Process 0 requests disk access at time 396 ms for 10 ms
+-- Process 0 will release the disk at time 406 ms
+-- DISK completion event for process 0 at time 406 ms
+-- Process 0 requests a core at time 406 ms for 99 ms
+-- Process 0 gets a core at time 406 ms
+-- Process 0 will release a core at time 505 ms
+-- CORE completion event for process 0 at time 505 ms
+-- Process 0 requests user interaction at time 505 ms for 99 ms
+-- Process 0 will complete user interaction at time 604 ms
+-- USER completion event for process 0 at time 604 ms
+-- Process 0 requests a core at time 604 ms for 99 ms
+-- Process 0 gets a core at time 604 ms
+-- Process 0 will release a core at time 703 ms
+-- CORE completion event for process 0 at time 703 ms
+
+CURRENT STATE OF THE SYSTEM AT TIME 703:
+Current number of busy cores: 0
+READY QUEUE:
+empty
+DISK QUEUE:
+empty
+PROCESS TABLE:
+Process 0 started at 0 is TERMINATED
