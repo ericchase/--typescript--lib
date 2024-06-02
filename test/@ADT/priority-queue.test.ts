@@ -1,7 +1,7 @@
 import { describe, expect, test } from 'bun:test';
 
-import { IPriorityQueue, MaxPriorityQueue, MinPriorityQueue } from '../src/@ADT/priority-queue';
-import { nChooseRPermutations } from '../src/combinatorics';
+import { type IPriorityQueue, MaxPriorityQueue, MinPriorityQueue } from '../../src/@ADT/priority-queue';
+import { nChooseRPermutations } from '../../src/combinatorics';
 
 function queueToArray<T>(queue: IPriorityQueue<T>) {
   const items: T[] = [];

@@ -1,7 +1,7 @@
 import { describe, expect, test } from 'bun:test';
 
-import { IBinaryHeap, MaxBinaryHeap, MinBinaryHeap } from '../src/@DS/binary-heap';
-import { nChooseRPermutations } from '../src/combinatorics';
+import { type IBinaryHeap, MaxBinaryHeap, MinBinaryHeap } from '../../src/@DS/binary-heap';
+import { nChooseRPermutations } from '../../src/combinatorics';
 
 function heapToArray<T>(heap: IBinaryHeap<T>) {
   const items: T[] = [];

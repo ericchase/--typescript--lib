@@ -13,15 +13,17 @@ export declare function generateSlidingWindowFilter<T>(
   void,
   unknown
 >;
-export declare function generateChunks<T>(
+export declare function generateChunkSlices<T>(
   array: T[],
   size: number,
 ): Generator<
-  {
-    slice: T[];
-    begin: number;
-    end: number;
-  },
+  | never[]
+  | {
+      slice: T[];
+      begin: number;
+      end: number;
+    },
   void,
   unknown
 >;
+export declare function generateChunks<T>(array: T[], size: number): Generator<T[], void, unknown>;

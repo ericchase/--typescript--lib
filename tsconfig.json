@@ -21,7 +21,7 @@
     "rootDir": "./"
   },
   "exclude": ["node_modules", "*.config.ts"],
-  "include": ["./src"],
+  "include": ["./src", "./test"],
   "watchOptions": {
     "watchDirectory": "useFsEvents",
     "watchFile": "useFsEvents",
